@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sasa Login Sample</title>
+  </head>
+  <body>
+    <h1>Sasa Login Demo</h1>
+    <template>
+      <div id="app">
+        <div class="header">
+          <h1>Sasa Demo App</h1>
+          <div data-netlify-identity-menu></div>
+          <button type="button" class="identity-signup">Signup</button>
+          <button type="button" class="identity-login">Login</button>
+          <button type="button" class="identity-logout">Logout</button>
+        </div>
+        <div v-if="isLoggedIn">
+          <div class="add-task-wrapper">
+            <input
+              type="text"
+              v-model="newTaskInput"
+              @keydown.enter="addTask"
+            />
+            <button @click="addTask">Add task</button>
+          </div>
+          <div class="task" v-for="task in tasks" :key="task.id">
+            <div class="task-main">
+              <span>{{ task.name }}</span>
+              <span class="buttons">
+                <button @click="removeTask(task.id)">❌</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div v-else>Please log in.</div>
+      </div>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="format-detection" content="telephone=no" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="box a" id="top">
+        <div class="row">
+          <div class="col">
+            <span
+              class="material-icons"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+              style="
+                font-size: 40px;
+                position: fixed;
+                padding: 10px;
+                background-color: #31332a;
+                z-index: 2;
+                border-radius: 5%;
+                cursor: pointer;
+              "
+            >
+              menu
+            </span>
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasExample"
+              data-bs-keyboard="false"
+              data-bs-backdrop="false"
+              aria-labelledby="offcanvasExampleLabel"
+              style="font-size: 20px; background-color: snow"
+            >
+              <div class="offcanvas-header">
+                <h5
+                  class="offcanvas-title"
+                  id="offcanvasExampleLabel"
+                  style="color: #29648a"
+                >
+                  Menu
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close text-reset"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="offcanvas-body">
+                <div id="sidebar" class="border rounded">
+                  <a href="/index.html" class="nav-link">
+                    <span class="material-icons"> house </span>
+                    <span class="ms-1 d-sm-inline" data-bs-dismiss="offcanvas"
+                      >Home</span
+                    >
+                  </a>
+                  <a
+                    href="#menu1"
+                    class="nav-link collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-parent="#sidebar"
+                    ><span class="material-icons"> local_hospital </span>
+                    <span class="ms-1 d-sm-inline">Health</span></a
+                  >
+                  <div
+                    class="collapse ps-2"
+                    id="menu1"
+                    data-bs-parent="#sidebar"
+                  >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Women's Health</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Men's Health</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Children's Health</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Population Health</a
+                    >
+                  </div>
+                  <a
+                    href="#menu2"
+                    class="nav-link collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-parent="#sidebar"
+                    ><span class="material-icons"> school </span>
+                    <span class="ms-1 d-sm-inline">Education</span></a
+                  >
+                  <div
+                    class="collapse ps-2"
+                    id="menu2"
+                    data-bs-parent="#sidebar"
+                  >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >K-5</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Grades 6-12</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Post Secondary</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Adult Education</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Opportunity Youth</a
+                    >
+                  </div>
+                  <a
+                    href="#menu3"
+                    class="nav-link collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-parent="#sidebar"
+                    ><span class="material-icons"> account_balance </span>
+                    <span class="ms-1 d-sm-inline">Economics</span></a
+                  >
+                  <div
+                    class="collapse ps-2"
+                    id="menu3"
+                    data-bs-parent="#sidebar"
+                  >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Business Ownership</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Government Assistance</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Employment</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Poverty</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Housing</a
+                    >
+                  </div>
+                  <a
+                    href="#menu4"
+                    class="nav-link collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-parent="#sidebar"
+                    ><span class="material-icons"> gavel </span>
+                    <span class="ms-1 d-sm-inline">Criminal Justice</span></a
+                  >
+                  <div
+                    class="collapse ps-2"
+                    id="menu4"
+                    data-bs-parent="#sidebar"
+                  >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Adult Arrests</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Adult Incarceration</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Juvenile Justice</a
+                    >
+                  </div>
+                  <a
+                    href="#menu5"
+                    class="nav-link collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-parent="#sidebar"
+                    ><span class="material-icons"> stairs </span>
+                    <span class="ms-1 d-sm-inline">Social Mobility</span></a
+                  >
+                  <div
+                    class="collapse ps-2"
+                    id="menu5"
+                    data-bs-parent="#sidebar"
+                  >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Item 1</a
+                    >
+                    <a href="#" class="nav-link" data-bs-dismiss="offcanvas"
+                      >Item 2</a
+                    >
+                  </div>
+                  <a
+                    href="#menu6"
+                    class="nav-link collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-parent="#sidebar"
+                    ><span class="material-icons"> manage_accounts </span>
+                    <span class="ms-1 d-sm-inline">Services</span></a
+                  >
+                  <div
+                    class="collapse ps-2"
+                    id="menu6"
+                    data-bs-parent="#sidebar"
+                  >
+                    <a
+                      href="pivot.html"
+                      class="nav-link"
+                      data-bs-dismiss="offcanvas"
+                      >Search</a
+                    >
+                    <a
+                      href="booking.html"
+                      class="nav-link"
+                      data-bs-dismiss="offcanvas"
+                      >Book an Appointment</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <header class="header">
+          <div class="sasa">
+            <u class="underline-animation">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 255 32.61"
+                id="underline"
+              >
+                <path
+                  d="M5 14.11s54-8 125-9 120 5 120 5-200.5-5.5-239.5 17.5"
+                  class="stroke"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="10"
+                />
+              </svg>
+              SASA</u
+            >
+          </div>
+          <div class="info">
+            <p>Social Analytics for Sustainable Accountability</p>
+          </div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li
+                class="breadcrumb-item active"
+                aria-current="page"
+                style="color: snow"
+              >
+                Home
+              </li>
+            </ol>
+          </nav>
+        </header>
+      </div>
+
+      <main class="box b" id="donutSection">
+        <div class="donutBox">
+          <h5>Snapshot of Health Disparities</h5>
+          <canvas
+            id="healthDonut"
+            class="charts"
+            aria-label="health indicators with parity achieved 90 and disparity gap to close at 10"
+            role="img"
+          ></canvas>
+          <a href="#"
+            ><button type="button" class="btn btn-info">More Info</button></a
+          >
+        </div>
+        <div class="donutBox">
+          <h5>Snapshot of Education Disparities</h5>
+          <canvas
+            id="educationDonut"
+            class="charts"
+            aria-label="education indicators with parity achieved 75 and disparity gap to close at 25"
+          ></canvas>
+          <a href="#"
+            ><button type="button" class="btn btn-info">More Info</button></a
+          >
+        </div>
+        <div class="donutBox">
+          <h5>Snapshot of Economic Disparities</h5>
+          <canvas
+            id="economicsDonut"
+            class="charts"
+            aria-label="economic indicators with parity achieved 85 and disparity gap to close at 15"
+          ></canvas>
+          <a href="#"
+            ><button type="button" class="btn btn-info">More Info</button></a
+          >
+        </div>
+        <div class="donutBox">
+          <h5>Snapshot of Criminal Justice Disparities</h5>
+          <canvas
+            id="justiceDonut"
+            class="charts"
+            aria-label="criminal justice indicators with parity achieved 80 and disparity gap to close at 20"
+          ></canvas>
+          <a href="#"
+            ><button type="button" class="btn btn-info">More Info</button></a
+          >
+        </div>
+        <div class="donutBox">
+          <h5>Snapshot of Social Mobility Disparities:Coming in 2022</h5>
+          <canvas
+            id="mobilityDonut"
+            class="charts"
+            aria-label="social mobility indicators with parity achieved 70 and disparity gap to close at 30"
+          ></canvas>
+          <a href="#"
+            ><button type="button" class="btn btn-info">More Info</button></a
+          >
+        </div>
+      </main>
+
+      <div class="box e" id="about" aria-label="about section">
+        <div class="teamIntro">
+          <h2>Meet Our Team of Statistical Analysts</h2>
+        </div>
+        <div class="teamContainer">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="Images/sampleWoman.png"
+                  alt="team member Sylvia Samson"
+                  class="teamMember"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Sylvia Samson</h1>
+                <p>Researcher & Engineer</p>
+                <p>10 Years Experience</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="Images/sampleMan2.png"
+                  alt="team member Marco Tillson"
+                  class="teamMember"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Dr. Marco Tillson</h1>
+                <p>Statistics Engineer</p>
+                <p>11 Years Experience</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="Images/sampleWoman2.png"
+                  alt="team member Teresa Willis"
+                  class="teamMember"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Dr. Teresa Willis</h1>
+                <p>Researcher & Professor</p>
+                <p>14 Years Experience</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="Images/sampleMan1.png"
+                  alt="team member Adam Thompson"
+                  class="teamMember"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Adam Thompson</h1>
+                <p>Statistical Researcher</p>
+                <p>12 Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box f">
+        <form
+          id="contactUs"
+          name="contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <h2>Contact Us</h2>
+          <div class="form-group">
+            <p class="hidden">
+              <label
+                >Don’t fill this out if you’re human: <input name="bot-field"
+              /></label>
+            </p>
+            <label for="InputName">Name</label>
+            <input type="name" class="form-control" id="InputName" />
+          </div>
+          <div class="form-group">
+            <label for="InputEmail">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="InputEmail"
+              aria-describedby="emailHelp"
+            />
+            <small id="emailHelp" class="form-text text-dark"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="inputMessage">Message</label>
+            <textarea
+              class="form-control"
+              id="inputMessage"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-info" style="margin-top: 5px">
+            Send
+          </button>
+        </form>
+      </div>
+
+      <footer class="box g">
+        <div class="footer">
+          <p>
+            Data provided by Crane R&D 555 State St. Columbus, OH 43215
+            (555)-555-1234 Copyright 2021
+          </p>
+        </div>
+        <div class="footerLinks">
+          <a
+            href="#top"
+            onclick="scrollToTop(event)"
+            style="text-decoration: none"
+          >
+            <div class="scroll">
+              <span class="material-icons" id="arrow" aria-label="up arrow">
+                arrow_upward
+              </span>
+            </div>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

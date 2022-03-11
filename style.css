@@ -1,0 +1,328 @@
+@charset "UTF-8";
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  color: #444;
+}
+
+.a {
+  grid-column: 1 / span 10;
+  grid-row: 1;
+  background-color: #31332a;
+  color: snow;
+}
+
+.underline-animation {
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  font-size: 40px;
+  font-family: 'Libre Baskerville', serif;
+}
+#underline {
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.stroke {
+  stroke: #2e9cca;
+  stroke-width: 0.15em;
+  stroke-dasharray: 822;
+  stroke-dashoffset: 822;
+  animation: underlineAnimation 1.8s 2s linear forwards;
+}
+
+@keyframes underlineAnimation {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.border a {
+  color: #82838c;
+}
+
+.collapse a {
+  color: #29648a;
+}
+
+.header {
+  background-color: #31332a;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+.breadcrumb {
+  background-color: #746752;
+  font-size: 16px;
+  width: auto;
+  color: snow;
+  padding: 10px;
+}
+.breadcrumb li {
+  padding: 0 20px;
+}
+
+.b {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #d3c9bc;
+  border-top: solid #876653 5px;
+  color: #8590aa;
+  grid-column: 1 / span 10;
+  grid-row: 2;
+  padding: 20px;
+}
+
+.donutBox {
+  height: auto;
+  width: 40%;
+  background-color: snow;
+  margin: 5px;
+  padding: 5px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+.donutBox h5 {
+  color: #333230;
+}
+
+.e {
+  background-color: #746752;
+  border-top: solid #876653 5px;
+  grid-column: 1 / span 10;
+  grid-row: 3;
+  padding: 20px;
+}
+.f {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / span 10;
+  grid-row: 4;
+  background-color: #d3c9bc;
+  border-top: solid #876653 5px;
+  font-size: 20px;
+  padding: 20px;
+}
+.g {
+  grid-column: 1 / span 10;
+  grid-row: 5;
+  padding: 20px;
+  background-color: #31332a;
+  border-top: solid #876653 5px;
+  color: snow;
+}
+
+.form-group {
+  padding-top: 30px;
+}
+
+.footer {
+  text-align: center;
+}
+.footerLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll {
+  /*this is a div encircling the scrollup arrow */
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: #444;
+  background-color: snow;
+  border: solid #fffafa 2px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  text-align: center;
+  padding-top: 5px;
+}
+.scroll:hover {
+  background-color: #2e9cca;
+}
+#arrow {
+  color: black;
+}
+.material-icons {
+  color: #028cdb;
+}
+.material-icons:hover {
+  color: #876653;
+}
+#sidebar a {
+  color: #253d54;
+}
+#sidebar a:hover {
+  color: #853131;
+}
+.hidden {
+  display: none;
+}
+
+.info {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.teamMember {
+  border: snow solid 5px;
+  height: 200px;
+  width: 200px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+.teamIntro {
+  color: snow;
+  text-align: center;
+  font-size: 30px;
+}
+
+.teamContainer {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do a horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  padding-top: 10px;
+  background-color: #876653;
+  border: solid #fffafa 3px;
+  color: white;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 576px) {
+  .b {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #d3c9bc;
+    border-top: solid #876653 5px;
+    color: #8590aa;
+    grid-column: 1 / span 10;
+    grid-row: 2;
+    padding: 0px;
+  }
+  .donutBox {
+    height: auto;
+    width: 100%;
+    background-color: snow;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 5px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  .teamContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .donutBox {
+    height: auto;
+    width: 85%;
+    background-color: snow;
+    margin: 5px;
+    padding: 5px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+}
