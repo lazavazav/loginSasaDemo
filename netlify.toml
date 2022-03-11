@@ -1,7 +1,6 @@
 [build]
   functions="/functions"
-  publish = "/dist"
+  publish = "index.html"
   build = "npm run build"
 
-[context.production]
-  publish = "/dist"
+
