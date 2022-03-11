@@ -12,35 +12,30 @@
   </head>
   <body>
     <h1>Sasa Login Demo</h1>
-    <template>
-      <div id="app">
-        <div class="header">
-          <h1>Sasa Demo App</h1>
-          <div data-netlify-identity-menu></div>
-          <button type="button" class="identity-signup">Signup</button>
-          <button type="button" class="identity-login">Login</button>
-          <button type="button" class="identity-logout">Logout</button>
-        </div>
-        <div v-if="isLoggedIn">
-          <div class="add-task-wrapper">
-            <input
-              type="text"
-              v-model="newTaskInput"
-              @keydown.enter="addTask"
-            />
-            <button @click="addTask">Add task</button>
-          </div>
-          <div class="task" v-for="task in tasks" :key="task.id">
-            <div class="task-main">
-              <span>{{ task.name }}</span>
-              <span class="buttons">
-                <button @click="removeTask(task.id)">❌</button>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div v-else>Please log in.</div>
+
+    <div id="app">
+      <div class="header">
+        <h1>Sasa Demo App</h1>
+        <div data-netlify-identity-menu></div>
+        <button type="button" class="identity-signup">Signup</button>
+        <button type="button" class="identity-login">Login</button>
+        <button type="button" class="identity-logout">Logout</button>
       </div>
-    </template>
+      <div v-if="isLoggedIn">
+        <div class="add-task-wrapper">
+          <input type="text" v-model="newTaskInput" @keydown.enter="addTask" />
+          <button @click="addTask">Add task</button>
+        </div>
+        <div class="task" v-for="task in tasks" :key="task.id">
+          <div class="task-main">
+            <span>{{ task.name }}</span>
+            <span class="buttons">
+              <button @click="removeTask(task.id)">❌</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div v-else>Please log in.</div>
+    </div>
   </body>
 </html>
