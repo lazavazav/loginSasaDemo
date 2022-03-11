@@ -1,16 +1,14 @@
 {
-  "version": "1.0.0",
-  "description": "Login Demo",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "netlify dev",
-    "build": "npm run build"
-  },
-  "author": "Leslie Z",
-  "license": "ISC",
-  "dependencies": {
+  "name": "login",
+  "devDependencies": {
     "@brianmmdev/faunaservice": "^1.0.5",
-    "eslint": "^8.10.0"
-  }
+    "eslint": "^8.10.0"},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazavazav/loginSasaDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lazavazav/loginSasaDemo/issues"
+  },
+  "homepage": "https://github.com/lazavazav/loginSasaDemo#readme"
 }
