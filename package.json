@@ -1,4 +1,14 @@
 {
+  "name": "loginSasaDemo",
+  "version": "1.0.0",
+  "description": "Login Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "netlify dev"
+  },
+  "author": "Leslie Z",
+  "license": "ISC",
   "dependencies": {
     "@brianmmdev/faunaservice": "^1.0.5",
     "eslint": "^8.10.0"
